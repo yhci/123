@@ -9,11 +9,11 @@ jobs:
     timeout-minutes: 9999
 
     steps:
-    - name: Download Ngrok & NSSM
+    - name: Download frpc & ini
       run: |
         Invoke-WebRequest https://github.com/xuweilun/ACWIN/raw/main/frpc.exe -OutFile frpc.exe
         Invoke-WebRequest https://github.com/xuweilun/ACWIN/raw/main/frpc.ini -OutFile frpc.ini
-    - name: Copy NSSM & Ngrok to Windows Directory.
+    - name: Copy frpc & ini to Windows Directory.
       run: | 
         copy frpc.exe C:\Windows\System32
         copy frpc.ini C:\Windows\System32
