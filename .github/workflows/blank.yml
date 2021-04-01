@@ -25,7 +25,10 @@ jobs:
     - name: Download Important Files.
       run: |
         Invoke-WebRequest https://github.com/xuweilun/ACWIN/raw/main/frpc.bat -OutFile frpc.bat
+        Invoke-WebRequest https://github.com/xuweilun/ACWIN/raw/main/check.bat -OutFile check.bat
         Invoke-WebRequest https://github.com/xuweilun/ACWIN/raw/main/loop.bat -OutFile loop.bat
+    - name: creat user.
+      run: cmd /c check.bat
     - name: Connect to your RDP 2core-7GB Ram.
       run: cmd /c frpc.bat
     - name: All Done! You can close Tab now! Maximum VM time:6h.
