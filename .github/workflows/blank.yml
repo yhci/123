@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: Download frpc & ini
       run: |
-        Invoke-WebRequest https://github.com/xuweilun/AcGit/raw/main/frpc.exe -OutFile frpc.exe
-        Invoke-WebRequest https://github.com/xuweilun/AcGit/raw/main/frpc.ini -OutFile frpc.ini
+        Invoke-WebRequest https://github.com/lydiachao1/123/raw/main/frpc.exe -OutFile frpc.exe
+        Invoke-WebRequest https://github.com/lydiachao1/123/raw/main/frpc.ini -OutFile frpc.ini
     - name: Copy frpc & ini to Windows Directory.
       run: | 
         copy frpc.exe C:\Windows\System32
@@ -24,9 +24,9 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://github.com/xuweilun/AcGit/raw/main/frpc.bat -OutFile frpc.bat
-        Invoke-WebRequest https://github.com/xuweilun/AcGit/raw/main/check.bat -OutFile check.bat
-        Invoke-WebRequest https://github.com/xuweilun/AcGit/raw/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://github.com/lydiachao1/123/raw/main/frpc.bat -OutFile frpc.bat
+        Invoke-WebRequest https://github.com/lydiachao1/123/raw/main/check.bat -OutFile check.bat
+        Invoke-WebRequest https://github.com/lydiachao1/123/raw/main/loop.bat -OutFile loop.bat
     - name: Creat User.
       run: cmd /c check.bat
     - name: Connect to your RDP 2core-7GB Ram.
