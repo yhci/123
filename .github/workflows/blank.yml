@@ -26,11 +26,11 @@ jobs:
       run: |
         Invoke-WebRequest https://github.com/yhci/123/raw/main/frpc.bat -OutFile frpc.bat
         Invoke-WebRequest https://github.com/yhci/123/raw/main/check.bat -OutFile check.bat
-        Invoke-WebRequest https://github.com/yhci/123/raw/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://github.com/yhci/123/raw/main/last.bat -OutFile last.bat
     - name: Creat User.
       run: cmd /c check.bat
     - name: Connect to your RDP 2core-7GB Ram.
       run: cmd /c frpc.bat
     - name: All Done! You can close Tab now! Maximum VM time:6h.
-      run: cmd /c loop.bat 
+      run: cmd /c last.bat 
       
